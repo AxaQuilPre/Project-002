@@ -1,9 +1,0 @@
-def number_divider(a):
-    a = str(a)
-    length = len(a)
-    cut = length
-    while cut >= 4:
-        cut -= 3
-        a = a[:cut] + "\'" + a[cut:]
-    return a
-print(number_divider(1000))
