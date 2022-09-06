@@ -1,6 +1,15 @@
 #Following definiton will cover the patrol calculations.
+def number_divider(a):
+    a = str(a)
+    length = len(a)
+    cut = length
+    while cut >= 4:
+        cut -= 3
+        a = a[:cut] + "\'" + a[cut:]
+    return a
+
 def patrol_calculator():
-    final_draft = "**Contracted Patrol by (name)** \n \n2 **Bonuses**"
+    final_draft = "**Contracted Patrol by (name)** \n \n **Bonuses**"
     question = int(input("Did the event take over 40 minutes? \n Choices: \n Type 1 for yes \n Type 2 for no \n"))
     if question == 1:
         total = 375000
@@ -14,17 +23,17 @@ def patrol_calculator():
         final_draft = final_draft + "\n 4+ Settlements cleared: $50'0000"
     question = int(input("How many main bases were cleared? \n Type the number below \n"))
     total += question * 100000
-    final_draft = final_draft + f"\n {question}x Main Bases cleared: ${question * 100000}"
+    final_draft = final_draft + f"\n {question}x Main Bases cleared: $" + number_divider(question * 100000)
     question = int(input("Was 1 wave held in at least 4 locations? \n Choices: \n Type 1 for yes \n Type 2 for no \n"))
     if question == 1:
         total += 100000
         final_draft = final_draft + "\n Waves held: $100'000"
-    final_draft = final_draft + f"\n \n *Sub-Total: {total}*"
+    final_draft = final_draft + f"\n \n *Sub-Total: " + number_divider(total) + "*"
+    # All penalities are calculated below from here on
     final_draft = final_draft + " \n \n **KIA Penalities**"
-# All penalities are calculated below from here on
     question = int(input("How many KIA's? \n"))
     total -= question * 50000
-    final_draft = final_draft + f"\n {question}x KIA's: -${question * 100000}"
+    final_draft = final_draft + f"\n {question}x KIA's: -$" + number_divider(question * 100000)
     if question == 0:
         total += 150000
         final_draft = final_draft + "\n 0 KIA's: $150'000"
@@ -54,7 +63,10 @@ def patrol_calculator():
         total -= 500000
         final_draft = final_draft + "\n 5+ VDIA's: -$500'000"
 #Totals and final formatting
-    final_draft = final_draft + f"\n \n **Total: {total}**"
+    if total >= 0:
+        final_draft = final_draft + f"\n \n **Total: ${number_divider(total)}**"
+    else:
+        final_draft = final_draft + f"\n \n **Total: -${number_divider(total)}**"
     return final_draft
 
 #User callings
@@ -66,4 +78,4 @@ print(patrol_calculator())
 
 
 
-#This is a automation for financial agents. This code belongs to AxaQuilPre. Any reproduction or inauthorized use is prohibited. CCC-33e3S3-ddfm
+#This is a automation for financial agents. This code belongs to AxaQuilPre. Any reproduction or inauthorized use is prohibited. 
