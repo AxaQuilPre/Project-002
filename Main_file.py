@@ -1,4 +1,4 @@
-#Following definiton will cover the patrol calculations.
+#Following definition will split numbers to be easier to read.
 def number_divider(a):
     a = str(a)
     length = len(a)
@@ -8,6 +8,7 @@ def number_divider(a):
         a = a[:cut] + "\'" + a[cut:]
     return a
 
+#Following definiton will cover the patrol calculations.
 def patrol_calculator():
     final_draft = "**Contracted Patrol by (name)** \n \n **Bonuses**"
     question = int(input("Did the event take over 40 minutes? \n Choices: \n Type 1 for yes \n Type 2 for no \n"))
