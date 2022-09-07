@@ -9,7 +9,7 @@ def number_divider(a):
     return a
 
 def patrol_calculator():
-    final_draft = "**Contracted Patrol by (name)** \n \n **Bonuses**"
+    final_draft = "**Contracted Patrol by (name)** \n Link: \n \n **Bonuses**"
     question = int(input("Did the event take over 40 minutes? \n Choices: \n Type 1 for yes \n Type 2 for no \n"))
     if question == 1:
         total = 375000
@@ -33,7 +33,7 @@ def patrol_calculator():
     final_draft = final_draft + " \n \n **KIA Penalities**"
     question = int(input("How many KIA's? \n"))
     total -= question * 50000
-    final_draft = final_draft + f"\n {question}x KIA's: -$" + number_divider(question * 100000)
+    final_draft = final_draft + f"\n {question}x KIA's: -$" + number_divider(question * 50000)
     if question == 0:
         total += 150000
         final_draft = final_draft + "\n 0 KIA's: $150'000"
@@ -66,11 +66,85 @@ def patrol_calculator():
     if total >= 0:
         final_draft = final_draft + f"\n \n **Total: ${number_divider(total)}**"
     else:
+        total = total * -1
         final_draft = final_draft + f"\n \n **Total: -${number_divider(total)}**"
     return final_draft
 
+def hardcore_calculator():
+    final_draft = "**Hardcore Patrol by (name)** \n Link: \n \n **Bonuses**"
+    question = int(input("Did the event take over 50 minutes? Was a main base raided? \n Choices: \n Type 1 for less than 50 min \n Type 2 for more than 50 min \n Type 3 for more than 50min w/ main base raided \n"))
+    if question == 1:
+        total = 500000
+        final_draft = final_draft + "\n Minimum Payment: $500'000"
+    elif question == 2:
+        total = 750000
+        final_draft = final_draft + "\n Minimum Payment: $750'000"
+    else:
+        total = 1250000
+        final_draft = final_draft + "\n Minimum Payment: $1'250'000"
+    question = int(input("Were at lest 4 settlement cleared? \n Choices: \n Type 1 for yes \n Type 2 for no \n"))
+    if question == 1:
+        total += 250000
+        final_draft = final_draft + "\n 4+ Settlements cleared: $250'0000"
+    question = int(input("How many main bases were cleared? \n Type the number below \n"))
+    total += question * 200000
+    final_draft = final_draft + f"\n {question}x Main Bases cleared: $" + number_divider(question * 200000)
+    question = int(input("Were 5 settlements cleared with 0 KIA's? \n Choices: \n Type 1 for yes \n Type 2 for no \n"))
+    if question == 1:
+        total += 350000
+        final_draft = final_draft + "\n 5 settlements cleared with 0 KIA's: $350'000"
+    question = int(input("Were 6 settlements cleared with 1 KIA or less? \n Choices: \n Type 1 for yes \n Type 2 for no \n"))
+    if question == 1:
+        total += 500000
+        final_draft = final_draft + "\n 6 settlements cleared with 1 KIA or less: $500'000"
+    question = int(input("How many main bases were cleared with 1 KIA or less? \n Type the number below \n"))
+    total += question * 750000
+    final_draft = final_draft + f"\n {question}x Main Bases cleared with 1 KIA or less: $" + number_divider(question * 750000)
+    final_draft = final_draft + f"\n \n *Sub-Total: " + number_divider(total) + "*"
+    
+    # All penalities are calculated below from here on
+    final_draft = final_draft + " \n \n **KIA Penalities**"
+    question = int(input("How many KIA's? \n"))
+    total -= question * 100000
+    final_draft = final_draft + f"\n {question}x KIA's: -$" + number_divider(question * 100000)
+    if question == 0:
+        total += 500000
+        final_draft = final_draft + "\n 0 KIA's: $500'000"
+    elif question >= 3 and question <= 4:
+       total -= 1500000
+       final_draft = final_draft + "\n 3-4 KIA's: -$1'500'000"
+    elif question >= 5 and question <= 8:
+        total -= 3000000
+        final_draft = final_draft + "\n 5-8 KIA's: -$3'000'000"
+    elif question > 9:
+        total -= 6000000
+        final_draft = final_draft + "\n 9+ KIA's: -$6'000'000"
+    question = int(input("How many VDIA's? \n"))
+    if question == 0:
+        total += 250000
+        final_draft = final_draft + "\n 0 VDIA's: $250'000"
+    elif question >= 1 and question <= 2:
+        total -= 500000
+        final_draft = final_draft + "\n 1-2 VDIA's: -$500'000"
+    elif question >= 3:
+        total -= 1000000
+        final_draft = final_draft + "\n 3+ VDIA's: -$1'000'000"
+#Totals and final formatting
+    if total >= 0:
+        final_draft = final_draft + f"\n \n **Total: ${number_divider(total)}**"
+    else:
+        total = total * -1
+        final_draft = final_draft + f"\n \n **Total: -${number_divider(total)}**"
+    return final_draft
+
+
+
 #User callings
-print(patrol_calculator())
+query = int(input(" Type 1 or 2 to select \n 1: Patrol \n 2: Hardcore Patrol \n"))
+if query == 1:
+    print(patrol_calculator())
+elif query == 2:
+    print(hardcore_calculator())
 
 
 
