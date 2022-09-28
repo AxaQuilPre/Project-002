@@ -1,0 +1,15 @@
+class sorter:
+    def __init__(self,first,last,eyevision) -> None:
+        self.first = first
+        self.last = last
+        self.eyevis = eyevision
+        self.fullname = first + " " + last
+    def checker(self, eyevision):
+        if eyevision > 4:
+            self.eyestatus = "Good"
+        else:
+            self.eyestatus = "Bad"
+
+
+emp_1 = sorter("Aurélien", "Jacot", 4)
+print(emp_1.fullname)
