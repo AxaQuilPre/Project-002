@@ -4,12 +4,13 @@ class sorter:
         self.last = last
         self.eyevis = eyevision
         self.fullname = first + " " + last
-    def checker(self, eyevision):
-        if eyevision > 4:
+    def checker(self):
+        if self.eyevis > 4:
             self.eyestatus = "Good"
         else:
             self.eyestatus = "Bad"
+        return self.eyestatus
 
 
-emp_1 = sorter("Aurélien", "Jacot", 4)
-print(emp_1.fullname)
+emp_1 = sorter("Aurélien", "Jacot",5)
+print(sorter.checker(emp_1))
