@@ -1,0 +1,13 @@
+from PyQt5.QtWidgets import QApplication, QLabel, QBoxLayout, QMainWindow
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super(MainWindow,self).__init__()
+
+
+
+
+app = QApplication([])
+main = QMainWindow
+main.show()
+app.exec()
