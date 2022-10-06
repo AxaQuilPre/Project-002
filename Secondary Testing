@@ -1,0 +1,32 @@
+from datetime import date
+
+class sorter:
+    lenses = 3
+    
+    def __init__(self,first,last,eyevision) -> None:
+        self.first = first
+        self.last = last
+        self.eyevis = eyevision * sorter.lenses
+        self.fullname = first + " " + last
+    def checker(self):
+        if self.eyevis >= 4:
+            self.eyestatus = "Good"
+        else:
+            self.eyestatus = "Bad"
+        return self.eyestatus
+    @classmethod
+    def tester(cls,amount):
+        cls.lenses = amount
+    
+    @staticmethod
+    def right():
+        return date.today()
+        
+
+
+sorter.tester(1)
+emp_1 = sorter("Aurélien", "Jacot",4)
+print(emp_1.fullname)
+print(sorter.checker(emp_1))
+
+print(sorter.right())
