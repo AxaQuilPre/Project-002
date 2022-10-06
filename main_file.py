@@ -9,7 +9,7 @@ def number_divider(a):
     return a
 
 def patrol_calculator():
-    final_draft = "**Contracted Patrol by (name)** \n Link: \n \n **Bonuses**"
+    final_draft = "**Contracted Patrol by ** \n Link: \n \n **Bonuses**"
     question = int(input("Did the event take over 40 minutes? \n Choices: \n Type 1 for yes \n Type 2 for no \n"))
     if question == 1:
         total = 375000
@@ -71,7 +71,7 @@ def patrol_calculator():
     return final_draft
 
 def hardcore_calculator():
-    final_draft = "**Hardcore Patrol by (name)** \n Link: \n \n **Bonuses**"
+    final_draft = "**Hardcore Patrol by ** \n Link: \n \n **Bonuses**"
     question = int(input("Did the event take over 50 minutes? Was a main base raided? \n Choices: \n Type 1 for less than 50 min \n Type 2 for more than 50 min \n Type 3 for more than 50min w/ main base raided \n"))
     if question == 1:
         total = 500000
@@ -138,7 +138,7 @@ def hardcore_calculator():
     return final_draft
 
 def divisional_calculator():
-    final_draft = "**Contracted Patrol by (name)** \n Link: \n \n **Bonuses**"
+    final_draft = "**Divisional Patrol by ** \n Link: \n \n **Bonuses**"
     question = int(input("Did the event take over 40 minutes? \n Choices: \n Type 1 for yes \n Type 2 for no \n"))
     if question == 1:
         total = 800000
