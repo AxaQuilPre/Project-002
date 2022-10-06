@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="MM9orMPu288qKVu5Rgyu" name="Page-1">
-        <mxGraphModel dx="3317" dy="410" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
+        <mxGraphModel dx="3324" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -43,8 +43,14 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="VOgwaF5fa4Wdl2MW7Jps-8" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="570" y="180" width="80" height="80" as="geometry"/>
+                <mxCell id="4" value="Yes" style="edgeStyle=none;html=1;" edge="1" parent="1" source="VOgwaF5fa4Wdl2MW7Jps-8" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="No" style="edgeStyle=none;html=1;" edge="1" parent="1" source="VOgwaF5fa4Wdl2MW7Jps-8" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="VOgwaF5fa4Wdl2MW7Jps-8" value="More than 40 mins?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="810" y="180" width="80" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="VOgwaF5fa4Wdl2MW7Jps-11" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="270" y="350" width="80" height="80" as="geometry"/>
@@ -721,6 +727,57 @@
                 </mxCell>
                 <mxCell id="VOgwaF5fa4Wdl2MW7Jps-207" value="Fin&lt;br&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="261.25" y="1880" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="800k" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;" edge="1" parent="1" source="5" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="400k" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="860" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="yes" style="edgeStyle=none;html=1;" edge="1" parent="1" source="7" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="4-6 settlements cleared?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="370" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="10" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="100k" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="16" target="18">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="How many main bases?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="575" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="18" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="200k per main base" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="680" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="20" target="22">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="No KIA?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="780" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="22" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="200k" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="900" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="VDIA?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="1000" width="80" height="80" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
